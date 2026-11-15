@@ -1,0 +1,67 @@
+import fs from 'fs';
+import fspath from 'path';
+export default {
+    extractDirectoryPath,
+    extractFileTitlePath,
+    joinPath,
+    resolvePath,
+    relativePath,
+    normalizePath,
+    testDirectoryExists,
+    testFileExists,
+    readFile,
+    writeFile,
+    touchDirectories,
+};
+function extractDirectoryPath(path) {
+    return fspath.dirname(path);
+}
+function extractFileTitlePath(path, extension) {
+    return fspath.basename(path, extension);
+}
+function joinPath(...paths) {
+    return fspath.join(...paths);
+}
+function resolvePath(...paths) {
+    return fspath.normalize(fspath.join(...paths));
+}
+function relativePath(baseDirectoryPath, path) {
+    return fspath.relative(baseDirectoryPath, path);
+}
+function normalizePath(path) {
+    return fspath.normalize(path);
+}
+function testDirectoryExists(path) {
+    try {
+        const stat = fs.statSync(path);
+        return stat.isDirectory();
+    }
+    catch {
+        return false;
+    }
+}
+function testFileExists(path) {
+    try {
+        fs.accessSync(path, fs.constants.R_OK);
+        return true;
+    }
+    catch (error) {
+        return false;
+    }
+}
+function readFile(path) {
+    return fs.readFileSync(path, { encoding: 'utf8' });
+}
+function writeFile(path, content) {
+    return fs.writeFileSync(touchDirectories(path), content, { encoding: 'utf8' });
+}
+function touchDirectories(filepath) {
+    const dirpath = fspath.dirname(filepath);
+    if (!fs.existsSync(dirpath)) {
+        fs.mkdirSync(dirpath, {
+            recursive: true
+        });
+    }
+    return filepath;
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGxhdGZvcm0ubWpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vc291cmNlL3BsYXRmb3JtLm10cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQSxPQUFPLEVBQUUsTUFBTSxJQUFJLENBQUE7QUFDbkIsT0FBTyxNQUFNLE1BQU0sTUFBTSxDQUFBO0FBRXpCLGVBQWU7SUFDZCxvQkFBb0I7SUFDcEIsb0JBQW9CO0lBQ3BCLFFBQVE7SUFDUixXQUFXO0lBQ1gsWUFBWTtJQUNaLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsY0FBYztJQUNkLFFBQVE7SUFDUixTQUFTO0lBQ1QsZ0JBQWdCO0NBQ2hCLENBQUE7QUFFRCxTQUFTLG9CQUFvQixDQUM1QixJQUFZO0lBRVosT0FBTyxNQUFNLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxDQUFBO0FBQzVCLENBQUM7QUFFRCxTQUFTLG9CQUFvQixDQUM1QixJQUFZLEVBQ1osU0FBa0I7SUFFbEIsT0FBTyxNQUFNLENBQUMsUUFBUSxDQUFDLElBQUksRUFBRSxTQUFTLENBQUMsQ0FBQTtBQUN4QyxDQUFDO0FBRUQsU0FBUyxRQUFRLENBQ2hCLEdBQUcsS0FBZTtJQUVsQixPQUFPLE1BQU0sQ0FBQyxJQUFJLENBQUMsR0FBRyxLQUFLLENBQUMsQ0FBQTtBQUM3QixDQUFDO0FBRUQsU0FBUyxXQUFXLENBQ25CLEdBQUcsS0FBZTtJQUVsQixPQUFPLE1BQU0sQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLElBQUksQ0FBQyxHQUFHLEtBQUssQ0FBQyxDQUFDLENBQUE7QUFDL0MsQ0FBQztBQUVELFNBQVMsWUFBWSxDQUNwQixpQkFBeUIsRUFDekIsSUFBWTtJQUVaLE9BQU8sTUFBTSxDQUFDLFFBQVEsQ0FBQyxpQkFBaUIsRUFBRSxJQUFJLENBQUMsQ0FBQTtBQUNoRCxDQUFDO0FBRUQsU0FBUyxhQUFhLENBQ3JCLElBQVk7SUFFWixPQUFPLE1BQU0sQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUE7QUFDOUIsQ0FBQztBQUVELFNBQVMsbUJBQW1CLENBQzNCLElBQVk7SUFFWixJQUFJO1FBQ0gsTUFBTSxJQUFJLEdBQUcsRUFBRSxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsQ0FBQTtRQUM5QixPQUFPLElBQUksQ0FBQyxXQUFXLEVBQUUsQ0FBQTtLQUN6QjtJQUNELE1BQU07UUFDTCxPQUFPLEtBQUssQ0FBQTtLQUNaO0FBQ0YsQ0FBQztBQUVELFNBQVMsY0FBYyxDQUN0QixJQUFZO0lBRVosSUFBSTtRQUNILEVBQUUsQ0FBQyxVQUFVLENBQUMsSUFBSSxFQUFFLEVBQUUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUE7UUFDdEMsT0FBTyxJQUFJLENBQUE7S0FDWDtJQUNELE9BQU8sS0FBSyxFQUFFO1FBQ2IsT0FBTyxLQUFLLENBQUE7S0FDWjtBQUNGLENBQUM7QUFFRCxTQUFTLFFBQVEsQ0FDaEIsSUFBWTtJQUVaLE9BQU8sRUFBRSxDQUFDLFlBQVksQ0FBQyxJQUFJLEVBQUUsRUFBRSxRQUFRLEVBQUUsTUFBTSxFQUFFLENBQUMsQ0FBQTtBQUNuRCxDQUFDO0FBRUQsU0FBUyxTQUFTLENBQ2pCLElBQVksRUFDWixPQUFlO0lBRWYsT0FBTyxFQUFFLENBQUMsYUFBYSxDQUFDLGdCQUFnQixDQUFDLElBQUksQ0FBQyxFQUFFLE9BQU8sRUFBRSxFQUFFLFFBQVEsRUFBRSxNQUFNLEVBQUUsQ0FBQyxDQUFBO0FBQy9FLENBQUM7QUFFRCxTQUFTLGdCQUFnQixDQUN4QixRQUFnQjtJQUVoQixNQUFNLE9BQU8sR0FBRyxNQUFNLENBQUMsT0FBTyxDQUFDLFFBQVEsQ0FBQyxDQUFBO0lBRXhDLElBQUksQ0FBQyxFQUFFLENBQUMsVUFBVSxDQUFDLE9BQU8sQ0FBQyxFQUFFO1FBQzVCLEVBQUUsQ0FBQyxTQUFTLENBQUMsT0FBTyxFQUFFO1lBQ3JCLFNBQVMsRUFBRSxJQUFJO1NBQ2YsQ0FBQyxDQUFBO0tBQ0Y7SUFFRCxPQUFPLFFBQVEsQ0FBQTtBQUNoQixDQUFDIn0=

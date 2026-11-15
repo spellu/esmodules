@@ -1,0 +1,20 @@
+{
+    "compiler": "babel",
+    "source": {
+        "directory": "01-input",
+        "entry": "00-module.js",
+        "include": "**/*.js"
+    },
+    "module": {
+        "directory": "03-output",
+        "name": "example-14"
+    },
+    "babel": {
+        "presets": [
+            "flow"
+        ]
+    },
+    "debug": {
+        "outputSource": "02-middle"
+    }
+}

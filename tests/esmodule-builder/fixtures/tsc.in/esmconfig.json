@@ -1,0 +1,18 @@
+{
+    "version": "1.0",
+    "compiler": "typescript",
+    "source": "module.ts",
+    "module": {
+        "directory": ".",
+        "name": "example",
+        "sourceMap": "none"
+    },
+    "debug": {
+        "outputSource": "aa"
+    },
+    "typescript": {
+        "compilerOptions": {
+            "inlineSourceMap":true
+        }
+    }
+}

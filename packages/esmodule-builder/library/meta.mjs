@@ -1,0 +1,7 @@
+import P from './platform.mjs';
+const packageInfo = JSON.parse(P.readFile(decodeURIComponent(new URL(import.meta.url).pathname.replace(/\/[^\/]+$/, "/../package.json"))));
+export default {
+    version: packageInfo.version,
+    program: 'esmc',
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWV0YS5tanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9zb3VyY2UvbWV0YS5tdHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0EsT0FBTyxDQUFDLE1BQU0sZ0JBQWdCLENBQUE7QUFHOUIsTUFBTSxXQUFXLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FDN0IsQ0FBQyxDQUFDLFFBQVEsQ0FDVCxrQkFBa0IsQ0FBQyxJQUFJLEdBQUcsQ0FBQyxNQUFNLENBQUMsSUFBSSxDQUFDLEdBQUcsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxPQUFPLENBQUMsV0FBVyxFQUFFLGtCQUFrQixDQUFDLENBQUMsQ0FDOUYsQ0FDRCxDQUFBO0FBRUQsZUFBZTtJQUNkLE9BQU8sRUFBRSxXQUFXLENBQUMsT0FBTztJQUM1QixPQUFPLEVBQUUsTUFBTTtDQUNmLENBQUEifQ==

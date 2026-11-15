@@ -1,0 +1,45 @@
+{
+  "name": "esmodule-builder",
+  "version": "1.2.0",
+  "description": "ECMAScript-Module (ES Module) builder.",
+  "license": "Apache-2.0",
+  "keywords": [
+    "esmodules",
+    "typescript",
+    "babel",
+    "flow"
+  ],
+  "author": "Jumilla <fumio@jumilla.me>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spellu/esmodules.git"
+  },
+  "homepage": "https://github.com/spellu/esmodules#readme",
+  "type": "module",
+  "exports": {
+    "default": "./library/cli.mjs"
+  },
+  "imports": {
+    "#source-map": "./vendor/source-map/source-map.js"
+  },
+  "bin": {
+    "esmc": "./esmc.mjs"
+  },
+  "files": [
+    "esmc.mjs",
+    "library",
+    "vendor"
+  ],
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "commander": "^8.3.0",
+    "glob": "^7.2.0",
+    "json5": "^2.2.0",
+    "npmlog": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/babel__core": "^7.1.18",
+    "@types/glob": "^7.2.0",
+    "@types/npmlog": "^4.1.4"
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "compiler": "typescript",
+    "source": "01-input/module.ts",
+    "module": "03-output/example-11",
+    "debug": {
+        "outputSource": "02-middle"
+    }
+}

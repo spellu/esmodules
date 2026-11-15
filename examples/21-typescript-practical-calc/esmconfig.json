@@ -1,0 +1,15 @@
+{
+    "compiler": "typescript",
+    "source": {
+        "directory": "sources",
+        "entry": "00-module.ts",
+        "include": [
+            "**/*.ts"
+        ]
+    },
+    "module": {
+        "directory": "modules",
+        "name": "calc",
+        "sourceMap": "file"
+    }
+}

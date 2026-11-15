@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "esmodule-builder": "^0.13",
+    "@babel/core": "^7.10",
+    "@babel/preset-env": "^7.10"
+  },
+  "scripts": {
+    "build": "yarn run esmc"
+  }
+}

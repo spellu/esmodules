@@ -1,0 +1,1 @@
+{"version":3,"sources":["__TEST__/sources/00-module.ts","__TEST__/sources/01-name.ts"],"names":[],"mappings":"AACA,IAAU,IAAI,CAEb;AAFD,WAAU,IAAI;IACA,YAAO,GAAG,OAAO,CAAA;AAC/B,CAAC,EAFS,IAAI,KAAJ,IAAI,QAEb;ACHD,MAAM,CAAC,MAAM,IAAI,GAAG,MAAM,CAAA;ADO1B,eAAe,IAAI,CAAA","file":"example.mjs","sourceRoot":""}

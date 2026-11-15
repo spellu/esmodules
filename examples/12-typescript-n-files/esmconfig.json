@@ -1,0 +1,17 @@
+{
+    "compiler": "typescript",
+    "source": {
+        "directory": "01-input",
+        "entry": "00-module.ts",
+        "include": [
+            "**/*.ts"
+        ]
+    },
+    "module": {
+        "directory": "03-output",
+        "name": "example-12"
+    },
+    "debug": {
+        "outputSource": "02-middle"
+    }
+}

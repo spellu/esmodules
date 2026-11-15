@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "sourcemap",
+  "version": "0.11.0",
+  "description": "",
+  "author": "Jumilla <fumio@jumilla.me>",
+  "license": "Apache-2.0",
+  "bin": {
+    "sourcemap": "cli.js"
+  },
+  "dependencies": {
+    "source-map": "^0.7.3"
+  }
+}

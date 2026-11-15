@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es2020",
+        "module": "node12",
+        "moduleResolution": "node12",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": false,
+        "strict": true,
+        "declaration": true,
+        "inlineSourceMap": true,
+        "outDir": "./library",
+        "rootDir": "./source",
+    },
+    "include": [
+        "./source",
+    ]
+}

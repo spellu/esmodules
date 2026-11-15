@@ -1,0 +1,10 @@
+{
+    "version": "1.0",
+    "compiler": "babel",
+    "source": "module.js",
+    "module": {
+        "directory": ".",
+        "name": "example",
+        "sourceMap": "none"
+    }
+}

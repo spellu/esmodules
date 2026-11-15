@@ -1,0 +1,21 @@
+{
+  "name": "esmodule-setup",
+  "version": "1.2.2",
+  "description": "ECMAScript-Module (ES Module) setup tool.",
+  "license": "Apache-2.0",
+  "keywords": [
+    "esmodules",
+    "typescript",
+    "babel",
+    "flow"
+  ],
+  "author": "Jumilla <fumio@jumilla.me>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spellu/esmodules.git"
+  },
+  "homepage": "https://github.com/spellu/esmodules#readme",
+  "bin": {
+    "esm-setup": "setup.js"
+  }
+}

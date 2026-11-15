@@ -1,0 +1,3 @@
+export const NAME = 'test';
+export default test;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIl9fVEVTVF9fL21vZHVsZS5qcyJdLCJuYW1lcyI6WyJOQU1FIiwidGVzdCJdLCJtYXBwaW5ncyI6IkFBQ0EsT0FBTyxNQUFNQSxJQUFJLEdBQUcsTUFBYjtBQUVQLGVBQWVDLElBQWYiLCJzb3VyY2VSb290IjoiIiwiZmlsZSI6ImV4YW1wbGUuanMifQ==

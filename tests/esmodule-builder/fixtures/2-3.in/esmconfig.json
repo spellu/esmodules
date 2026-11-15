@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "compiler": "typescript",
+    "source": "sources/00-module.ts",
+    "include": ["*"],
+    "exclude": [],
+    "module": {
+        "directory": "modules",
+        "name": "example",
+        "sourceMap": "inline"
+    }
+}

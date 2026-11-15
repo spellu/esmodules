@@ -1,0 +1,1 @@
+{"version":3,"sources":["sources/00-module.ts","sources/01-add.ts","sources/02-sub.ts"],"names":[],"mappings":"AACA,kBAAU,IAAI,CAAC;CACd;ACDD,kBAAU,IAAI,CAAC;IAEd,SAAgB,GAAG,CAAC,GAAG,IAAI,EAAE,MAAM,EAAE,GAAG,MAAM,CAE7C;CAED;ACND,kBAAU,IAAI,CAAC;IAEd,SAAgB,GAAG,CAAC,GAAG,IAAI,EAAE,MAAM,EAAE,GAAG,MAAM,CAE7C;CAED;AFDD,eAAe,IAAI,CAAA","file":"calc.d.ts","sourceRoot":""}

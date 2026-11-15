@@ -1,0 +1,30 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "group": "build",
+            "label": "esmodule-builder: ビルド",
+            "type": "typescript",
+            "tsconfig": "packages/builder/tsconfig.json",
+            "problemMatcher": [
+                "$tsc"
+            ]
+        },
+        {
+            "group": "build",
+            "label": "esmodule-*: リリース: パッチ",
+            "type": "shell",
+            "command": "lerna publish patch -y",
+            "problemMatcher": []
+        },
+        {
+            "group": "build",
+            "label": "esmodule-*: リリース: マイナー",
+            "type": "shell",
+            "command": "lerna publish minor",
+            "problemMatcher": []
+        }
+    ]
+}

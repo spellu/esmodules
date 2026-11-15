@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "esmodule-builder": "^0.12.2",
+    "typescript": "^3.9"
+  },
+  "scripts": {
+    "build": "yarn run esmc"
+  }
+}
